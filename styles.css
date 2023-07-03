@@ -1,0 +1,34 @@
+* {
+    color: #1f2937;
+    background-color: #d1d5db;
+}
+
+.correct {
+  color: #16a34a;
+}
+
+.error {
+  background: #f87171;
+}
+
+.skipped {
+  color: #4b5563;
+}
+
+#caret {
+  position: absolute;
+  background: #111827;
+  width: 2px;
+  animation: blink 500ms infinite;
+  z-index: 1;
+  transition: left 0.1s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
