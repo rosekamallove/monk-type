@@ -71,6 +71,7 @@ const start = () => {
       state: State.REMAINING,
     })),
   };
+
   const letter_count = text.length;
 
   const get_at = (position) => game_state.sequence[position];
