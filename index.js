@@ -58,11 +58,11 @@ alphabet.add(" ");
 
 let score;
 
-const start = () => {
-  const words = shuffle(dictionary).slice(0, 20);
+const start = async () => {
+  const quote = await getQuote();
+  const text = quote.content.toLowerCase();
 
   document.getElementById("game").style.display = "";
-  const text = words.join(" ");
 
   const game_state = {
     position: 0,
@@ -95,7 +95,7 @@ const start = () => {
         game_state.position--;
         game_state.sequence[game_state.position].state = State.REMAINING;
       }
-    } else if (alphabet.has(key)) {
+    } else if (true) {
       console.log("processing letter");
       const current = get_current();
       if (current.character === key) {
